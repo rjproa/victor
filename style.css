@@ -191,7 +191,7 @@ a {
 /* ******************** ScrollBar *********************** */
 
 body::-webkit-scrollbar {
-  width: .4rem;
+  width: .5rem;
   background-color: transparent;
   background-color: #f5f5f5;
 }
@@ -478,7 +478,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   font-family: var(--font-family-first);
   letter-spacing: 1px;
-  background-color: #252525;
+  background-color: var(--color-black);
   cursor: pointer;
 }
 
@@ -491,7 +491,7 @@ body::-webkit-scrollbar-thumb {
   top: 8px;
   left: 8px;
   background-color: transparent;
-  border: thin solid #252525;
+  border: thin solid var(--color-black);
   transition: all .4s ease-out;
 }
 
@@ -534,7 +534,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 32px;
   font-family: var(--font-family-first);
   font-weight: 400;
-  color: #252525;
+  color: var(--color-black);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -566,7 +566,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   letter-spacing: 6px;
   text-align: start;
-  color: #252525;
+  color: var(--color-black);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -609,6 +609,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   font-size: 12px;
+  color: var(--color-text);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -621,9 +622,6 @@ body::-webkit-scrollbar-thumb {
 .services-btns div {
   width: 4rem;
   height: 4rem;
-  font-size: 3rem;
-  font-weight: 100;
-  color: #bebebe;
   margin: 0 2rem;
   border-radius: 50%;
   cursor: pointer;
@@ -643,7 +641,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .services-btns div:hover {
-  background-color: #ebebeb82;
+  background-color: #ebebebc2;
 }
 
 /********************* Testimony ********************/
@@ -657,14 +655,13 @@ body::-webkit-scrollbar-thumb {
   max-width: 360px;
   height: 400px;
   margin: 5rem auto 3rem;
-  overflow: hidden;
 }
 
 .quotes {
   max-height: 200px;
   font-size: 700px;
   font-family: 'Times New Roman', Times, serif;
-  color: #555;
+  color: var(--color-text);
   top: 10%;
   right: 5%;
 }
@@ -759,7 +756,6 @@ body::-webkit-scrollbar-thumb {
 .contact-container {
   padding-bottom: 2rem;
 }
-
 
 .contact-form {
   max-width: 480px;
