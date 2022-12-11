@@ -634,6 +634,7 @@ body::-webkit-scrollbar-thumb {
 
 .services-btns div.disable:hover {
   background-color: transparent;
+  cursor: default;
 }
 
 .services-btns div * {
