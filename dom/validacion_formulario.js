@@ -53,11 +53,13 @@ export default function contactFormValidation() {
       .then(json => {
         console.log(json);
         $response.style.animationPlayState = "running";
+        $inputs.forEach(el => {
+          d.querySelector(`[data-${el.name}]`).classList.remove("active");
+        })
       })
       .catch(err => {
         console.log(err);
       })
-
     $form.reset();
   });
 }
