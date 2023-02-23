@@ -521,6 +521,103 @@ body::-webkit-scrollbar-thumb {
   transform: translateX(-100%) rotate(-90deg);
 }
 
+/* ********************* BUTTON WHATSAPP*********************** */
+
+.btn-wtsp-container {
+  right: 1rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 4px 4px 16px #0005;
+}
+
+.wtsp-mesage {
+  right: 4.5rem;
+  bottom: 3rem;
+  font-size: 14px;
+  background-color: #eeeeee;
+  padding: .8rem 1.2rem;
+  border-radius: .5rem;
+  box-shadow: 4px 4px 16px#0005;
+  transition: transform .1s ease-out;
+  animation: wtsp-msg 5s both 15s;
+}
+
+@keyframes wtsp-msg {
+  0% {
+    right: 0;
+    transform: scale(0);
+  }
+
+  10% {
+    right: 4.5rem;
+    transform: scale(1);
+  }
+}
+
+.wtsp-mesage div {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: white;
+  text-align: center;
+  background-color: #000;
+  padding-top: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ********************* BUTTON SCROLL TOP *********************** */
+
+.botom-scroll-top {
+  width: 3rem;
+  height: 3rem;
+  background-color: #000;
+  position: fixed;
+  bottom: 7rem;
+  right: 1rem;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.botom-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.botom-scroll-top a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.botom-scroll-container a svg {
+  width: 30px;
+  height: auto;
+  transition: transform 400ms linear;
+  transform: rotate(-90deg);
+}
+
+.botom-scroll-top:hover {
+  box-shadow: 4px 4px 10px #0005;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
 
 /********************************* SECTIONS  *********************************/
 
@@ -543,33 +640,46 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
-.about-description>span {
-  color: var(--color-black);
-  font-size: 1rem;
+.about-description p:nth-child(2) {
   font-weight: 700;
-  font-family: var(--font-family-second);
+  color: var(--color-black);
+  margin-bottom: .4rem;
 }
 
 .about-description>p {
-  color: var(--color-text);
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: var(--font-family-second);
+  color: var(--color-text);
   text-align: justify;
-  margin-top: .4rem;
 }
 
 .about-description .about-networks a {
   position: relative;
   font-size: 1.5rem;
   color: var(--color-black);
-  margin: 3rem 0 3rem 3rem;
+  margin: 3rem 4vw;
   transition: color .2s ease-out, transform .2s ease-out;
 }
 
 .about-description .about-networks a:hover {
-  color: #777777;
   transform: translateY(-5px);
+}
+
+.about-description .about-networks a:nth-child(1):hover {
+  color: #3b5998;
+}
+
+.about-description .about-networks a:nth-child(2):hover {
+  color: #C13584;
+}
+
+.about-description .about-networks a:nth-child(3):hover {
+  color: #c4302b;
+}
+
+.about-description .about-networks a:nth-child(4):hover {
+  color: #0e76a8;
 }
 
 .about-description .about-networks a span {
@@ -784,6 +894,11 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
+.services-number-content div:nth-child(even) {
+  /* border-bottom: 1px solid black; */
+  text-decoration: overline 1.2px var(--color-text);
+}
+
 .services-title {
   width: 3.5rem;
   height: auto;
@@ -846,8 +961,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .services-description-service {
-  width: 200px;
-  height: 72px;
+  width: 220px;
+  height: 100px;
   right: 26%;
   top: 180px;
   text-align: start;
@@ -856,8 +971,9 @@ body::-webkit-scrollbar-thumb {
 .services-description-service div {
   width: 100%;
   height: 100%;
-  font-size: 12px;
-  color: var(--color-text);
+  font-size: 13px;
+  color: var(--color-black);
+  padding-right: .5rem;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -905,7 +1021,7 @@ body::-webkit-scrollbar-thumb {
 
 .view-gallery div {
   width: 53%;
-  height: .5px;
+  height: .8px;
   background-color: #f1f1f151;
   transition: width .5s ease-out;
   transition: background-color .5s ease-out;
@@ -914,7 +1030,7 @@ body::-webkit-scrollbar-thumb {
 
 .view-gallery span {
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 300;
   color: white;
   margin-left: 1rem;
   transition: transform .5s ease-out, font-weight .5s ease-out;
@@ -931,7 +1047,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .view-gallery:hover>div {
-  background-color: #c6c6c6;
+  background-color: #fff;
 }
 
 .gallery {
@@ -1452,6 +1568,10 @@ footer {
 
   .about-container .about-networks {
     justify-content: flex-end;
+  }
+
+  .about-container .about-networks a {
+    margin: 3rem .5rem 3rem 3rem;
   }
 
   /******* Portfolio *******/
