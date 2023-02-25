@@ -244,9 +244,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 980;
 }
 
-.hamburger:hover>div {
+/* .hamburger:hover>div {
   background-color: #f1f1f1;
-}
+} */
 
 .header-panel {
   right: 1.15rem;
@@ -265,21 +265,21 @@ body::-webkit-scrollbar-thumb {
   transition: all .5s ease-out;
 }
 
-.hamburger:hover~span {
+/* .hamburger:hover~span {
   transform: scale(1);
-}
+} */
 
 .header-panel.on {
-  animation: panel 1s ease-out forwards;
+  animation: panel .8s ease-out forwards;
 }
 
 .header-panel.off {
-  animation: panelReturn 1.2s ease-out forwards;
+  animation: panelReturn 1.2s ease forwards;
 }
 
 @keyframes panel {
   0% {
-    background-color: #25252540;
+    background-color: #252525ee;
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     padding: 0 0;
   }
@@ -316,31 +316,20 @@ body::-webkit-scrollbar-thumb {
     background-color: #252525;
     border-radius: 0;
     padding: 3rem 0;
-    transform: translate(0, 0);
   }
 
-  20% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-  }
-
-  30% {
-    width: 42px;
-    height: 42px;
+  40% {
+    width: 60px;
+    height: 60px;
+    background-color: #25252520;
     transform: translate(-45vw, 45vh);
+    border-radius: 50%;
   }
 
-  95% {
-    background-color: #252525;
+  70% {
+    opacity: 0;
   }
 
-  100% {
-    right: 1.15rem;
-    width: 42px;
-    height: 42px;
-    padding: 0 0;
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    transform: translate(0);
-  }
 }
 
 .panel {
@@ -895,7 +884,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .services-number-content div:nth-child(even) {
-  /* border-bottom: 1px solid black; */
   text-decoration: overline 1.2px var(--color-text);
 }
 
@@ -977,6 +965,11 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.services-description-service div:nth-child(even) {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 22%);
 }
 
 .services-btns {
@@ -1550,6 +1543,15 @@ footer {
 
 
 @media screen and (min-width: 740px) {
+  /******* Panel Header *******/
+
+  .hamburger:hover~span {
+    transform: scale(1);
+  }
+
+  .hamburger:hover>div {
+    background-color: #f1f1f1;
+  }
 
   /******* About *******/
   .about-container {
