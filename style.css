@@ -244,10 +244,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 980;
 }
 
-/* .hamburger:hover>div {
-  background-color: #f1f1f1;
-} */
-
 .header-panel {
   right: 1.15rem;
   width: 42px;
@@ -1543,15 +1539,6 @@ footer {
 
 
 @media screen and (min-width: 740px) {
-  /******* Panel Header *******/
-
-  .hamburger:hover~span {
-    transform: scale(1);
-  }
-
-  .hamburger:hover>div {
-    background-color: #f1f1f1;
-  }
 
   /******* About *******/
   .about-container {
@@ -1756,9 +1743,20 @@ footer {
 
 
 @media screen and (min-width:900px) {
+
+  /*** Header ***/
+
+  .header-container>a {
+    font-size: 1.8rem;
+  }
+
+  /*** Servicios ***/
+
   .services-description-service {
     right: 36%;
   }
+
+  /*** Contacto ***/
 
   .contact-form {
     margin-right: 0;
@@ -1774,6 +1772,16 @@ footer {
 
 
 @media screen and (min-width: 1000px) {
+  /******* Panel Header *******/
+
+  .hamburger:hover~span {
+    transform: scale(1);
+  }
+
+  .hamburger:hover>div {
+    background-color: #f1f1f1;
+  }
+
   /* ***** Servicios ***** */
 
   .services {
